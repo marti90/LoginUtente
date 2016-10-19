@@ -8,5 +8,14 @@
 </head>
 <body>
 
+     <form action="doLogin.jsp" method="get">
+  
+     username: <input type="text" name="username" /><br>
+     password: <input type="password" name="password" /><br>
+     
+     <input type="submit" value="Registra" />
+     
+     </form>
+
 </body>
 </html>
