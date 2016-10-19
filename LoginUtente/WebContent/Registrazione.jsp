@@ -9,7 +9,7 @@
 </head>
 <body>
 
-     <form action="Welcome.jsp" method="get">
+     <form action="doRegistrazione.jsp" method="get">
   
      nome: <input type="text" name="name" /><br>
      cognome: <input type="text" name="cognome" /><br>
@@ -20,17 +20,7 @@
      
      </form>
      
-     <%
-     ServizioLogin sl = new ServizioLogin();
-     
-     String nome= request.getParameter("nome");
-     String cognome= request.getParameter("cognome");
-     String user= request.getParameter("username");
-     String password= request.getParameter("password");
-     
-     sl.registraUtente(nome, cognome, user, password);
-     
-     %>
+    
 
 </body>
 </html>

@@ -8,5 +8,13 @@
 </head>
 <body>
 
+    <%
+    String user= request.getParameter("username");
+    %>
+
+    <h1>Benvenuto<%= " "+user%></h1>
+    
+    <a href="Login.jsp">login page</a>
+
 </body>
 </html>
