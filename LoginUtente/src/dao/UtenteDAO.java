@@ -64,8 +64,8 @@ public class UtenteDAO {
 		return u;
 	}
 	
-	//READ con nome e cognome
-	public Utente readUtente(String nome, String cognome){
+	//READ con username e password
+	public Utente readUtente(String username, String password){
 		
 		Utente u = null;
 		
@@ -77,9 +77,9 @@ public class UtenteDAO {
 			tx = session.getTransaction();
 			tx.begin();
 			
-			query = session.createQuery("from Utente where nome =:nomeInserito and cognome =:cognomeInserito");
-			query.setString("nomeInserito", nome);
-			query.setString("cognomeInserito", cognome);
+			query = session.createQuery("from Utente where username =:usernameInserito and password =:passwordInserita");
+			query.setString("usernameInserito", username);
+			query.setString("passwordInserita", password);
 			u = (Utente) query.uniqueResult();
 			
 			tx.commit();
